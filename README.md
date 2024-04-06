@@ -60,4 +60,14 @@ python manage.py runserver
 ## API Documentation
 
 The Expense Manager API provides the following endpoints:
-- **`GET users/`**: Get List of Users or available participants
+- **`GET users/`** : Get List of Users or available participants
+- **`GET users/<user_id>/`** : Get Details of an indivisual User
+- **`POST users/create/`** : Create Users
+  - request body:
+    ```bash
+    {
+      "name": "Pawan Bisht",
+      "email": "xyz@xyz.com",
+      "mobile": "1231231231"
+    }
+    ```
