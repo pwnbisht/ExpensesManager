@@ -16,7 +16,7 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 
 app.conf.beat_schedule = {
     'export-data-to-s3-weekly': {
-        'task': 'myapp.management.commands.export_data_to_s3',
+        'task': 'expenses.management.commands.export_data_to_s3',
         'schedule': crontab(day_of_week='monday'),
     },
 }
