@@ -33,9 +33,9 @@ List any prerequisites or dependencies that users need to install to get your pr
 
 You can get the source code by cloning this repository to your local machine. Open your terminal and run the following command:
 ```bash
-https://github.com/pwnbisht/DjangoAPI_with_react.git
+git clone https://github.com/pwnbisht/ExpensesManager.git
 ```
 Change your working directory to the newly cloned repository:
 ```bash
-cd DjangoAPI_with_react
+cd ExpensesManager
 ```
