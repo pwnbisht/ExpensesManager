@@ -120,3 +120,24 @@ The Expense Manager API provides the following endpoints:
           }
       }
       ```
+Example: This month's electricity bill was Rs. 1000.
+  Now you can just go to the app and add that you paid 1000, select all the 4
+  people and then select split equally.
+  Input: u1 paid Rs 1000/- for u1 u2 u3 u4 and needs to be split EQUALLY
+  For this transaction, everyone owes Rs 250 to User1. The app should
+  update the balances in each of the profiles accordingly.
+  User2 owes User1: Rs 250
+  User3 owes User1: Rs 250
+  User4 owes User1: Rs 250
+
+  Let user_id of User1, User2, User3, User4 are respectively 1,2,3,4 then:
+
+  Request Body:
+  ```bash
+  {
+      "payer": 1,
+      "amount": 1000,
+      "expense_type": "EQUAL",
+      "participants": [1,2,3,4]    // list of participants
+  }
+```
