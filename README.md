@@ -9,7 +9,7 @@ Welcome to the Django API project! This repository contains the source code for 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [API Documentation](#apidocumentation)
+- [API Documentation](#api_documentation)
 - [Contributing](#contributing)
   
 ## About
