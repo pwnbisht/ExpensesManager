@@ -35,23 +35,23 @@ You can get the source code by cloning this repository to your local machine. Op
 ```bash
 git clone https://github.com/pwnbisht/ExpensesManager.git
 ```
-Change your working directory to the newly cloned repository:
+### Step 2: Change your working directory to the newly cloned repository:
 ```bash
 cd ExpensesManager
 ```
-Install dependencies:
+### Step 3: Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Make migrations:
+### Step 4: Make migrations:
 ```bash
 python manage.py makemigrations
 ```
-Apply Migrations
+### Step 5: Apply Migrations
 ```bash
 python manage.py migrate
 ```
-python manage.py runserver
+### Step 6: python manage.py runserver
 ```bash
 python manage.py runserver
 ```
