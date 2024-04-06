@@ -72,7 +72,7 @@ The Expense Manager API provides the following endpoints:
     }
     ```
 - **`GET /expenses/`** : Get list of expenses
-- **`GET /expenses/user_id/`** : get the expenses details of User
+- **`GET /expenses/<user_id>/`** : get the expenses details of User
   - Response:
       ```bash
       [
@@ -82,4 +82,41 @@ The Expense Manager API provides the following endpoints:
           }
       ]
       ```
-- 
+- **`POST expenses/create/`**: Split the expenses
+  - request body if expense type is EQUAL:
+      ```bash
+      {
+          "payer": <user_id>,      // who is paying
+          "amount": 100,           // total amount
+          "expense_type": "EQUAL",
+          "participants": [<user_id1>, <user_id2>, <user_id3>]    // list of participants
+      }
+    ```
+      
+  - if expense type is EXACT:
+      ```bash
+      {
+          "payer": <user_id>,
+          "amount": 100,
+          "expense_type": "EXACT",
+          "participants": [<user_id1>, <user_id2>, <user_id3>],
+          "exact_amounts": {
+              "<user_id1>": 40,
+              "<user_id2>": 30,
+              "<user_id3>": 30
+          }
+      }
+      ```
+  - if expsnse type is PERCENT
+      ```bash
+      {
+          "payer": <user_id>,
+          "amount": 100,
+          "expense_type": "PERCENT",
+          "participants": [<user_id>,<user_id>],
+          "percentages": {
+              "<user_id>": 40,
+              "<user_id>": 60
+          }
+      }
+      ```
