@@ -39,3 +39,19 @@ Change your working directory to the newly cloned repository:
 ```bash
 cd ExpensesManager
 ```
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+Make migrations:
+```bash
+python manage.py makemigrations
+```
+Apply Migrations
+```bash
+python manage.py migrate
+```
+python manage.py runserver
+```bash
+python manage.py runserver
+```
