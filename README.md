@@ -10,6 +10,7 @@ Welcome to the Django API project! This repository contains the source code for 
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [API Documentation](#api-documentation)
+- [Scheduling S3 Upload](#scheduling-s3-upload)
 - [Contributing](#contributing)
   
 ## About
@@ -141,3 +142,16 @@ Example: This month's electricity bill was Rs. 1000.
       "participants": [1,2,3,4]    // list of participants
   }
 ```
+
+## Scheduling S3 Upload
+- Update the environment variables AWS_SECRET_ACCESS_KEY, AWS_ACCESS_KEY_ID with actual KEYs
+- change the `bucket-name` in expenses/tasks.py file
+- run command
+  ```bash
+   celery -A ExpencesManager.celery beat --loglevel=info
+  ```
+- open new terminal and activate virtual env
+- run command
+  ```bash
+  python manage.py upload_to_s3
+  ```
