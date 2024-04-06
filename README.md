@@ -71,3 +71,15 @@ The Expense Manager API provides the following endpoints:
       "mobile": "1231231231"
     }
     ```
+- **`GET /expenses/`** : Get list of expenses
+- **`GET /expenses/user_id/`** : get the expenses details of User
+  - Response:
+      ```bash
+      [
+          {
+              "user": "User2",    // user_id(User3) owes User2: 115.00
+              "amount": "115.00"
+          }
+      ]
+      ```
+- 
