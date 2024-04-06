@@ -60,4 +60,4 @@ python manage.py runserver
 ## API Documentation
 
 The Expense Manager API provides the following endpoints:
-- `**GET users/**`: Get List of Users or available participants
+- **`GET users/`**: Get List of Users or available participants
