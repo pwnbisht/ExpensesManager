@@ -47,11 +47,11 @@ pip install -r requirements.txt
 ```bash
 python manage.py makemigrations
 ```
-### Step 5: Apply Migrations
+### Step 5: Apply Migrations:
 ```bash
 python manage.py migrate
 ```
-### Step 6: python manage.py runserver
+### Step 6: Run the development server:
 ```bash
 python manage.py runserver
 ```
