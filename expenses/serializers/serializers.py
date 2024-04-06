@@ -5,7 +5,7 @@ from expenses.models import User, Expense
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['name', 'email']
+        fields = ['name', 'email', 'mobile']
 
 
 class BalanceSerializer(serializers.Serializer):
